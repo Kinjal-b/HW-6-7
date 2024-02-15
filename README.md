@@ -105,13 +105,13 @@ Gradient of the Loss Function: Compute the gradient of the loss function with re
 
 Backpropagate the Error: For each layer, starting from the output layer and moving backward, perform the following steps:
 
-Compute Gradient of Weights and Biases: Use the chain rule to calculate the gradients of the loss function with respect to the weights and biases. This involves computing the derivative of the loss function with respect to the activations of each layer and then with respect to the weighted inputs z[l].
-Propagate the Gradient Backward: Compute the gradient of the loss with respect to the activations of the previous layer. This is necessary to continue the backpropagation process through the network.
+Compute Gradient of Weights and Biases: Use the chain rule to calculate the gradients of the loss function with respect to the weights and biases. This involves computing the derivative of the loss function with respect to the activations of each layer and then with respect to the weighted inputs z[l].  
+Propagate the Gradient Backward: Compute the gradient of the loss with respect to the activations of the previous layer. This is necessary to continue the backpropagation process through the network.  
 Update Weights and Biases: Use the gradients computed during backpropagation to update the weights and biases across all layers. The updates are typically made using an optimization algorithm like gradient descent:
 w[l] = w[l] − α (∂L/∂w[l])
 b[l] = b[l] − α (∂L/∂b[l])
 where 
-α is the learning rate, and ∂L/∂w[l] and ∂L/∂b[l] are the gradients of the loss L with respect to the weights and biases of the lth layer, respectively.
+α is the learning rate, and ∂L/∂w[l] and ∂L/∂b[l] are the gradients of the loss L with respect to the weights and biases of the lth layer, respectively.  
 
 Repeat: The process of forward propagation and backpropagation is repeated for many epochs (complete passes through the training dataset) until the network's performance on the training data converges to an optimum.
 
