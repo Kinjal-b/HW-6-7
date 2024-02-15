@@ -122,33 +122,33 @@ Backpropagation ensures that the error signal is distributed backward through
 #### Answer:
 Activation functions in neural networks are crucial for introducing non-linearity, enabling the network to learn complex patterns beyond what linear models can capture. Here's a detailed look at linear, ReLU, sigmoid, tanh, and softmax activation functions, including their purposes and typical uses:
 
-Linear Activation Function
+Linear Activation Function  
 Formula: 
-f(x)=x
-Purpose: It's a simple identity function that doesn’t introduce non-linearity. Its output is proportional to the input.
-Use: Linear activation functions are typically used in regression tasks or the output layer of a network when predicting continuous values. However, they are rarely used in hidden layers of deep neural networks as they do not contribute to the network's ability to model complex patterns.
+f(x)=x  
+Purpose: It's a simple identity function that doesn’t introduce non-linearity. Its output is proportional to the input.  
+Use: Linear activation functions are typically used in regression tasks or the output layer of a network when predicting continuous values. However, they are rarely used in hidden layers of deep neural networks as they do not contribute to the network's ability to model complex patterns.  
 
-ReLU (Rectified Linear Unit)
+ReLU (Rectified Linear Unit)  
 Formula: 
-f(x)=max(0,x)
-Purpose: ReLU introduces non-linearity while maintaining computational simplicity. It outputs the input directly if positive, otherwise, it outputs zero.
-Use: ReLU and its variants (e.g., Leaky ReLU) are the most widely used activation functions in hidden layers of deep neural networks due to their efficiency and effectiveness in promoting faster convergence during training. They help alleviate the vanishing gradient problem to some extent.
+f(x)=max(0,x)  
+Purpose: ReLU introduces non-linearity while maintaining computational simplicity. It outputs the input directly if positive, otherwise, it outputs zero.  
+Use: ReLU and its variants (e.g., Leaky ReLU) are the most widely used activation functions in hidden layers of deep neural networks due to their efficiency and effectiveness in promoting faster convergence during training. They help alleviate the vanishing gradient problem to some extent.  
 
 Sigmoid
-Formula: 
-f(x) = 1/(1+e^−x)
-Purpose: The sigmoid function outputs a value between 0 and 1, making it useful for models where output needs to be interpreted as a probability.
-Use: It is commonly used in the output layer of binary classification problems and for modeling binary outputs. However, it's less favored in hidden layers of deep networks due to the vanishing gradient problem.
+Formula:
+f(x) = 1/(1+e^−x)  
+Purpose: The sigmoid function outputs a value between 0 and 1, making it useful for models where output needs to be interpreted as a probability.  
+Use: It is commonly used in the output layer of binary classification problems and for modeling binary outputs. However, it's less favored in hidden layers of deep networks due to the vanishing gradient problem.  
 
-Tanh (Hyperbolic Tangent)
-Formula: 
-f(x) = tanh(x) = (e^x - e^−x)/(e^x + e^−x)
-Purpose: Similar to the sigmoid but outputs values between -1 and 1. This zero-centered nature makes it preferable over sigmoid in hidden layers as it leads to higher learning efficiency for the network.
-Use: Tanh is often used in hidden layers for tasks that benefit from data normalization (centered around zero), though it can also suffer from the vanishing gradient problem in very deep networks.
+Tanh (Hyperbolic Tangent)  
+Formula:
+f(x) = tanh(x) = (e^x - e^−x)/(e^x + e^−x)  
+Purpose: Similar to the sigmoid but outputs values between -1 and 1. This zero-centered nature makes it preferable over sigmoid in hidden layers as it leads to higher learning efficiency for the network.  
+Use: Tanh is often used in hidden layers for tasks that benefit from data normalization (centered around zero), though it can also suffer from the vanishing gradient problem in very deep networks.  
 
-Softmax
+Softmax  
 Formula: Given a vector z of raw class scores from the output layer of a neural network, the softmax function for the ith score is 
-f(z)i = e^z of i / (∑j e^z of j)
-​Purpose: Softmax converts raw scores to probabilities by taking the exponential of each output and then normalizing these values by dividing by the sum of all the exponentials. The result is a probability distribution over all possible classes.
-Use: Softmax is predominantly used in the output layer of multi-class classification problems. It's ideal for scenarios where each instance is to be classified into one of many possible categories.
-Each activation function has its specific advantages and is chosen based on the particular requirements of the neural network architecture and the nature of the task at hand. ReLU and its variants are generally preferred for hidden layers due to their computational efficiency and effectiveness in addressing the vanishing gradient problem, while sigmoid and softmax are more suited to output layers for binary and multi-class classification tasks, respectively.
+f(z)i = e^z of i / (∑j e^z of j)  
+​Purpose: Softmax converts raw scores to probabilities by taking the exponential of each output and then normalizing these values by dividing by the sum of all the exponentials. The result is a probability distribution over all possible classes.  
+Use: Softmax is predominantly used in the output layer of multi-class classification problems. It's ideal for scenarios where each instance is to be classified into one of many possible categories.  
+Each activation function has its specific advantages and is chosen based on the particular requirements of the neural network architecture and the nature of the task at hand. ReLU and its variants are generally preferred for hidden layers due to their computational efficiency and effectiveness in addressing the vanishing gradient problem, while sigmoid and softmax are more suited to output layers for binary and multi-class classification tasks, respectively.  
